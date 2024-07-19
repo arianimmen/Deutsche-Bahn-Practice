@@ -1,0 +1,165 @@
+/* --------------------------- Reset --------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+/* -------------------------- Root --------------------------- */
+
+:root {
+  --color-primary: rgb(236, 0, 22);
+  --color-set-001: rgb(215, 220, 225);
+  --color-set-002: rgb(240, 243, 245);
+  --color-set-003: rgb(40, 45, 55);
+}
+
+/* ------------------------ Typography ---------------------- */
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4,
+p {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* --------------------------- Btn ---------------------------- */
+
+.btn {
+  padding: 0.7rem 2rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--secondary {
+  background-color: white;
+  border: 0.1rem rgb(137, 137, 137) solid;
+  color: var(--color-set-003);
+}
+
+/* --------------------- Hero Section ------------------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.hero__img {
+  width: 100%;
+}
+
+.hero__content {
+  background-color: var(--color-set-001);
+  padding: 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__content p {
+  display: none;
+}
+
+.hero__content__btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+  .hero__content__btn {
+    padding: 1rem 1.5rem;
+    max-width: 14rem;
+    align-self: flex-end;
+  }
+
+  .hero__content {
+    background-color: var(--color-set-001);
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .hero {
+    max-width: 1280px;
+    height: 325px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .hero__img {
+    object-fit: cover;
+    object-position: left center;
+    max-width: 1280px;
+    width: 100%;
+    height: 325px;
+  }
+
+  .hero__content {
+    width: 334px;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .hero__content__title{
+    margin-top: 2rem;
+  }
+  .hero__content p {
+    margin: 1rem 0rem 2rem 0rem;
+    display: block;
+    line-height: 1.3rem;
+  }
+
+
+  .hero__content__btn {
+    justify-self: start;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+}
