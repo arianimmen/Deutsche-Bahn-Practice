@@ -506,7 +506,6 @@ p {
   align-items: center;
   background-color: white;
   padding-bottom: 1rem;
-  margin-bottom: 49rem;
 }
 
 .feature__dots__self {
@@ -519,6 +518,7 @@ p {
 
 .feature__dots__self:hover {
   background-color: var(--color-set-003);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 767px) {
@@ -568,6 +568,77 @@ p {
     .feature {
       margin-top: 15rem;
       overflow: hidden;
+    }
+  }
+}
+
+/* ------------------------- Grid Feature Section ---------------------------------- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 3rem;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.feature-grid img {
+  height: 100%;
+  width: 100%;
+}
+
+.feature-grid__item__self p {
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+.feature-grid__item__self div {
+  font-weight: bold;
+  text-align: center;
+}
+
+.feature-grid__item__self h2 {
+  margin-top: 1.5rem;
+}
+
+.feature-grid__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-grid__item__self__ul {
+  margin-top: 1.2rem;
+}
+
+.feature-grid__item__self__ul li {
+  list-style: disc;
+  margin: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 767px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    column-gap: 2rem;
+    padding: 1.5rem 4rem;
+  }
+
+  .feature-grid img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    .feature-grid {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      justify-items: center;
+      column-gap: 2rem;
+      padding: 1.5rem 4rem;
     }
   }
 }
