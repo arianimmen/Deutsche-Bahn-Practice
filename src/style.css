@@ -16,6 +16,10 @@
   }
 }
 
+body {
+  background-color: var(--color-set-002);
+}
+
 /* -------------------------- Root --------------------------- */
 
 :root {
@@ -286,6 +290,8 @@ p {
 /* temp */
 
 .search-form {
+  box-shadow: 0px 0px 10px rgb(103, 103, 103);
+
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
@@ -450,5 +456,118 @@ p {
   .search__classes {
     justify-content: center;
     width: 170px;
+  }
+}
+
+/* ----------------------------- Feature ----------------------------------- */
+
+.feature {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: white;
+}
+
+.feature img {
+  width: 100%;
+}
+
+.feature__information {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.feature__information h2,
+p {
+  margin-bottom: 1rem;
+}
+
+.feature__information a {
+  align-self: center;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature__dots {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+}
+
+.feature__dots__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 1rem;
+  margin-bottom: 49rem;
+}
+
+.feature__dots__self {
+  background-color: white;
+  border: 1px var(--color-set-003) solid;
+  border-radius: 100%;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.feature__dots__self:hover {
+  background-color: var(--color-set-003);
+}
+
+@media screen and (min-width: 767px) {
+  .feature {
+    height: 312px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 0rem 2rem 0rem 0rem;
+  }
+
+  .feature__information {
+    padding: 0rem;
+    justify-content: center;
+  }
+
+  .feature img {
+    width: 100%;
+    margin-right: 2rem;
+  }
+
+  .feature__information h2,
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .feature__information a {
+    align-self: flex-end;
+    padding: 1.3rem 0rem;
+    width: 200px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .feature__dots__container {
+    background-color: var(--color-set-002);
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  .feature__dots__self {
+    background-color: var(--color-set-002);
+  }
+
+  @media screen and (min-width: 960px) {
+    .feature {
+      margin-top: 15rem;
+      overflow: hidden;
+    }
   }
 }
