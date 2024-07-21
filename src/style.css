@@ -698,11 +698,11 @@ p {
   padding-bottom: 2rem;
 }
 
-.footer__list li{
+.footer__list li {
   padding: 1rem 1rem;
 }
 
-.footer__list a:hover{
+.footer__list a:hover {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
